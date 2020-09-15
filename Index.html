@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cal-cont row">
+        <div class="head" style="text-align: center; position: absolute; left: 40%;">
+          <h3>TIP CALCULATOR</h3>
+        </div>
+        <form class="form-group col-md-6">
+          <div class="alert alert-danger" id="err">
+            !pls make sure all fields are not empty
+          </div>
+
+          <label>Enter Tip Amount</label>
+          <input type="number" class="form-control" id="tipamt" />
+          <label>Enter Number Of People</label>
+          <input type="number" class="form-control" id="ppleamt" />
+          <label>Select Your Services</label>
+          <input type="input" placeholder="10%,20%,30%,50%" class="services form-control">
+
+          <button class="btn mt-2 btn-block btn-primary" id="calc">
+            Calculate
+          </button>
+        </form>
+        <div class="overlay">
+          <div class="result">
+            <label>Tip Amount:</label>
+            <b><span id="tipoup"></span></b>
+            <br />
+            <label>Number Of People:</label>
+            <b><span id="ppleoup"></span></b>
+            <br>
+            <label>Total:</label>
+            <b><span id="total"></span></b>
+
+            <button class="btn btn-block btn-danger cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
